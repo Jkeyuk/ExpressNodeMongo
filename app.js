@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/acronym", (req, res) => {
+app.get("/acronym?page=1&limit=10&search=:search", (req, res) => {
   res.send("Hello World!");
 });
 
