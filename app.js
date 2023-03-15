@@ -2,19 +2,19 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
+app.get("/acronym", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/", (req, res) => {
+app.post("/acronym", (req, res) => {
   res.send("Hello World!");
 });
 
-app.patch("/", (req, res) => {
+app.patch("/acronym/:acronymID", (req, res) => {
   res.send("Hello World!");
 });
 
-app.delete("/", (req, res) => {
+app.delete("/acronym/:acronymID", (req, res) => {
   res.send("Hello World!");
 });
 
