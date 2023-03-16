@@ -1,5 +1,7 @@
 # TestApp
 
+Small project to showcase Express JS + MongoDB to service a few endpoints.
+
 ## Requirements
 
 - Docker
