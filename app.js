@@ -26,12 +26,21 @@ app.post("/acronym", async (req, res) => {
   res.send(result).status(204);
 });
 
-app.patch("/acronym/:acronymID", (req, res) => {
-  res.send("Hello World!");
+app.patch("/acronym/:acronymID", async (req, res) => {
+  const query = { _id: req.params.acronymID };
+  const updates = {
+    $set: { acronym: req.body.acronym },
+  };
+  let collection = db.collection("acronym");
+  let result = await collection.updateOne(query, updates);
+  res.send(result).status(200);
 });
 
-app.delete("/acronym/:acronymID", (req, res) => {
-  res.send("Hello World!");
+app.delete("/acronym/:acronymID", async (req, res) => {
+  const query = { _id: req.params.acronymID };
+  const collection = db.collection("acronym");
+  let result = await collection.deleteOne(query);
+  res.send(result).status(200);
 });
 
 app.listen(port, async () => {
