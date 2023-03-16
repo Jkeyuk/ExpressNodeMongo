@@ -13,7 +13,7 @@
 4. Send requests with REST client.
 5. Shut down the database with `docker-compose down`
 
-# Currect Endpoints
+# Current Endpoints
 
 - `GET localhost:3000/acronym` : will return a list of the current  acronyms.
 - `POST localhost:3000/acronym` : will add an acronym to the database using the given format. Add Json to the body of the request.
